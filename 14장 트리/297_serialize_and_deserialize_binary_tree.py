@@ -35,7 +35,7 @@ class Codec:
         data = data.split()
         root = TreeNode(data[1])
         index = 2
-        q = deque([root])
+        q = deque(root)
         while q:
             node = q.popleft()
             if node.left is not None:
@@ -47,9 +47,6 @@ class Codec:
                 q.append(node.right)
             index += 1
         return root
-
-
-
 
 # Your Codec object will be instantiated and called as such:
 ser = Codec()
