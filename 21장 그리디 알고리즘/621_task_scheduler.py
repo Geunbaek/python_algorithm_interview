@@ -11,11 +11,8 @@ class Solution:
             for task, _ in counter.most_common(n+1):
                 sub_count += 1
                 result += 1
-                print(counter)
                 counter.subtract(task)
-                print(counter)
                 counter += Counter()
-                print(counter)
             if not counter:
                 break
 
